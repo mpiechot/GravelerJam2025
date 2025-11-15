@@ -1,11 +1,10 @@
 using System;
 using UnityEngine;
 
-public class Keyhole : MonoBehaviour
+public class Keyhole : MonoBehaviour, IInteractable
 {
     public GameObject KeyholeUI;
-    public GameObject sightIndicator;
-    public KeyCode InteractKey = KeyCode.E;
+    public GameObject sightIndicator;  
 
     private bool isPlayerInRange = false;
 
@@ -28,13 +27,9 @@ public class Keyhole : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact(InventoryManager inventory)
     {
-        if (isPlayerInRange && Input.GetKeyDown(InteractKey))
-        {
-            bool isActive = KeyholeUI.activeSelf;
-            KeyholeUI.SetActive(!isActive);
-        }
+        bool isActive = KeyholeUI.activeSelf;
+        KeyholeUI.SetActive(!isActive);
     }
 }
