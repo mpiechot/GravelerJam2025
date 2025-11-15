@@ -9,8 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     Vector2 currentVelocity;
     Animator animator;
 
-    public float walkingSpeed = 5;
-    public float SprintingSpeed = 5f;
+    public float movementSpeed = 5;
     public float acceleration = 10f;
     public float deceleration = 10f;
 
@@ -48,7 +47,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float movementSpeed = Input.GetKey(KeyCode.LeftShift) ? SprintingSpeed : walkingSpeed;
         Vector2 targetVelocity = moveInput * movementSpeed;
         float accelRate = (moveInput.magnitude > 0) ? acceleration : deceleration;
         currentVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, accelRate * Time.fixedDeltaTime);
