@@ -21,6 +21,7 @@ public class Keyhole : MonoBehaviour, IInteractable
         {
             sightIndicator.SetActive(false);
             KeyholeUI.SetActive(false);
+            print("Exited Keyhole Trigger"+ KeyholeUI);
         }
     }
 

@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-using UnityEngine;
 using UnityEngine.Rendering.Universal; // Für 2D-Lights
 
 [RequireComponent(typeof(Light2D))]

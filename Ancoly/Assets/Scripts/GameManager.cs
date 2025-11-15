@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     private void OnInventoryChanged(object sender, EventArgs args)
     {
-        if(requiredItemIds.All(id => playerInventory.Items.Contains(item => item.Id)))
+        if(requiredItemIds.All(id => playerInventory.Items.Any(item => item.Id == id)))
         {
             GameEnd(true);
         }
