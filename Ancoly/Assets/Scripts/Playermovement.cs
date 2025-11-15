@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -12,12 +13,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float movementSpeed = 5;
     public float acceleration = 10f;
     public float deceleration = 10f;
+    public Vector3 leftRotation;
+    public Vector3 rightRotation;
+    public Light2D lighter;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+        lighter.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,11 +34,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (moveInput.x < 0)
         {
             spriteRenderer.flipX = true;
+            UpdateLighterRotation(true);
         }
 
         else if (moveInput.x > 0)
         {
             spriteRenderer.flipX = false;
+            UpdateLighterRotation(false);
         }
         bool isWalking = moveInput.sqrMagnitude > 0.01f;
         if (isWalking)
@@ -51,5 +58,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
         float accelRate = (moveInput.magnitude > 0) ? acceleration : deceleration;
         currentVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, accelRate * Time.fixedDeltaTime);
         rb.linearVelocity = currentVelocity;
+    }
+
+    private void UpdateLighterRotation(bool facingLeft)
+    {
+        if (lighter != null)
+        {
+            lighter.transform.localEulerAngles = facingLeft ? leftRotation : rightRotation;
+        }
+    }
+
+    public void ActivateLighter()
+    {
+        this.lighter.gameObject.SetActive(true);
     }
 }
