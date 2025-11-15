@@ -10,7 +10,22 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField]
     public KeyCode InteractKey { get; private set; } = KeyCode.E;
-    [SerializeField] private LayerMask interactionMask;
+
+    [SerializeField]
+    private SoundEffectPlayer soundEffectPlayer;
+
+    [SerializeField]
+    private float sighTimer = 10f;
+
+    [SerializeField]
+    private LayerMask interactionMask;
+
+    private float currentSighTime;
+
+    void Start()
+    {
+        currentSighTime = sighTimer;
+    }
 
     void Update()
     {
@@ -18,8 +33,10 @@ public class PlayerController : MonoBehaviour
         {
             HandleInteraction();
         }
+
+        HandleSighTimer();
     }
-        
+
     private void HandleInteraction()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, InteractionRadius, interactionMask);
@@ -39,11 +56,26 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void HandleSighTimer()
+    {
+        currentSighTime -= Time.deltaTime;
+        if (currentSighTime <= 0f)
+        {
+            if (soundEffectPlayer != null)
+            {
+                soundEffectPlayer.PlaySound(SoundType.SIGH);
+            }
+
+            currentSighTime = sighTimer;
+        }
+    }
+
     // Gizmo zeichnen (nur zur Orientierung im Editor)
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, InteractionRadius);
-        
+
     }
 }
