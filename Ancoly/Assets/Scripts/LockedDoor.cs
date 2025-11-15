@@ -7,6 +7,8 @@ public class LockedDoor : MonoBehaviour, IInteractable
     public int KeyId { get; private set; }
 
     public bool DoorOpen { get; private set; } = false;
+    public GameObject KeyholeUI;
+    public bool hasKeyhole = true;
 
     public void Interact(InventoryManager inventory)
     {
@@ -14,5 +16,16 @@ public class LockedDoor : MonoBehaviour, IInteractable
         {
             DoorOpen = true;
         }
+        else
+        {
+            bool isActive = KeyholeUI.activeSelf;
+            if (hasKeyhole)
+            {
+                KeyholeUI.SetActive(!isActive);
+                Time.timeScale = isActive ? 1f : 0f;
+            }
+            
+        }
+            
     }
 }

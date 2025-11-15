@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3889868, y: 0.9847998, z: 0.036899365}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 3, y: 3, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 986827657459074965}
@@ -100,7 +100,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.31}
+  m_Offset: {x: -0.03, y: -0.54}
   m_Size: {x: 0.2, y: 0.21}
   m_Direction: 0
 --- !u!114 &3489720923293500954
@@ -115,8 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e868e7df5e52b44a86852bcd7237a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 2
-  SprintingSpeed: 4
+  movementSpeed: 4
   acceleration: 10
   deceleration: 10
   leftRotation: {x: 0, y: 0, z: 90}
@@ -134,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55aac98364f14d30808cf133f1a8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <InteractionRadius>k__BackingField: 0
+  <InteractionRadius>k__BackingField: 2
   <inventory>k__BackingField: {fileID: 7822408815535034182}
   <InteractKey>k__BackingField: 101
 --- !u!1 &5786875454046699877
@@ -458,7 +457,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

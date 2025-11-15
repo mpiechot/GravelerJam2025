@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField]
     public KeyCode InteractKey { get; private set; } = KeyCode.E;
+    [SerializeField] private LayerMask interactionMask;
 
     void Update()
     {
@@ -18,10 +19,10 @@ public class PlayerController : MonoBehaviour
             HandleInteraction();
         }
     }
-
+        
     private void HandleInteraction()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, InteractionRadius);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, InteractionRadius, interactionMask);
 
         Debug.Log("Test: " + hits.Length);
 
@@ -37,5 +38,12 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+    // Gizmo zeichnen (nur zur Orientierung im Editor)
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, InteractionRadius);
+        
     }
 }
