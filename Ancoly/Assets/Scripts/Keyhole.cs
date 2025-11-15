@@ -24,6 +24,7 @@ public class Keyhole : MonoBehaviour, IInteractable
         {
             isPlayerInRange = false;
             sightIndicator.SetActive(false);
+            KeyholeUI.SetActive(false);
         }
     }
 
