@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
                 if (hit.TryGetComponent<InventoryObject>(out var inventoryObject))
                 {
                     inventory.AddToInventory(inventoryObject);
+                    soundEffectPlayer.PlaySound(SoundType.ITEM_PICKUP);
                 }
             }
         }

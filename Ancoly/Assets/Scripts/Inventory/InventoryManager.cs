@@ -1,7 +1,7 @@
-using UnityEngine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
+using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -14,13 +14,13 @@ public class InventoryManager : MonoBehaviour
     public void AddToInventory(InventoryObject objectToAdd)
     {
         inventory.Add(objectToAdd);
-        InventoryChanged.Invoke(this, EventArgs.Empty);
+        InventoryChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public void RemoveFromInventory(InventoryObject objectToRemove)
     {
         inventory.Remove(objectToRemove);
-        InventoryChanged.Invoke(this, EventArgs.Empty);
+        InventoryChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public bool IsInsideInventory(string itemName)

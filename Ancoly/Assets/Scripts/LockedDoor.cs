@@ -1,12 +1,13 @@
-using JetBrains.Annotations;
 using System.Linq;
-using ThikkGames.GravelerGJ;
 using UnityEngine;
 
 public class LockedDoor : MonoBehaviour, IInteractable
 {
     [field: SerializeField]
     public int KeyId { get; private set; }
+
+    [SerializeField]
+    private SoundEffectPlayer soundEffectPlayer;
 
     public bool DoorOpen { get; private set; } = false;
     public GameObject KeyholeUI;
@@ -24,14 +25,16 @@ public class LockedDoor : MonoBehaviour, IInteractable
         {
             if (!DoorOpen && inventory.Items.Any(item => item.Id == KeyId))
             {
+                soundEffectPlayer.PlaySound(SoundType.DOOR_OPEN);
                 OpenDoor();
                 DoorOpen = true;
             }
             else
             {
-                bool isActive = KeyholeUI.activeSelf;
+                soundEffectPlayer.PlaySound(SoundType.DOOR_LOCKED);
                 if (hasKeyhole)
                 {
+                    bool isActive = KeyholeUI.activeSelf;
                     KeyholeUI.SetActive(!isActive);
                     Time.timeScale = isActive ? 1f : 0f;
                 }
