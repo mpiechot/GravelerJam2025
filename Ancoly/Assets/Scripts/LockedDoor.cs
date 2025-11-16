@@ -1,6 +1,4 @@
-using JetBrains.Annotations;
 using System.Linq;
-using ThikkGames.GravelerGJ;
 using UnityEngine;
 
 public class LockedDoor : MonoBehaviour, IInteractable
@@ -34,9 +32,9 @@ public class LockedDoor : MonoBehaviour, IInteractable
             else
             {
                 soundEffectPlayer.PlaySound(SoundType.DOOR_LOCKED);
-                bool isActive = KeyholeUI.activeSelf;
                 if (hasKeyhole)
                 {
+                    bool isActive = KeyholeUI.activeSelf;
                     KeyholeUI.SetActive(!isActive);
                     Time.timeScale = isActive ? 1f : 0f;
                 }
