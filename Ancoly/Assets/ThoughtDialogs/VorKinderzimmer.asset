@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VorKinderzimmer
   m_EditorClassIdentifier: 
   lines:
-  - "Die T\xFCr ist verschlossen. Ich komme nicht in den Raum hinein. Aber was ist
-    dort drin? Vielleicht kann ich etwas durch das Schl\xFCsselloch sehen.\r\n"
+  - "Es brennt Licht im Zimmer, aber die T\xFCr ist verschlossen. Was verbirgt sich
+    dahinter? Vielleicht kann ich etwas durch das Schl\xFCsselloch sehen.\r\n"

@@ -1229,8 +1229,8 @@ MonoBehaviour:
     \u2013 und doch f\xFChle."
   - Vielleicht finde ich mich irgendwann wieder. Aber bis dahin... lebt ihr in jeder
     Zeile, jedem Ton.
-  minWaitBeforeBubble: 2
-  maxWaitBeforeBubble: 5
+  minWaitBeforeBubble: 1
+  maxWaitBeforeBubble: 2
   textDisplayTime: 5
   buildDurationPerPart: 0.15
   dissolveDuration: 0.2

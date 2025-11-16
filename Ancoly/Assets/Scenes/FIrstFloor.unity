@@ -853,7 +853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &210615697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1297,7 @@ Transform:
   - {fileID: 531757842}
   - {fileID: 1421772278}
   - {fileID: 1240819795}
+  - {fileID: 733709964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358174152
@@ -2729,9 +2730,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Bin ich das im Spiegel? Mein Gesicht sieht so alt aus! Warum lag ich gerade
-    auf diesem Badezimmerboden? Nanu, da ist ja eine Notiz am Spiegel. \r\n\nSieht
-    nach einer medizinischen Formel aus. Ich kenne das aus meinem Studium. Was hat
-    das zu bedeuten?\r\n"
+    auf dem Badezimmerboden? Bin ich etwa eingeschlafen? \r\n\nDa ist eine Notiz
+    am Spiegel. Sieht nach einer chemischen Formel aus. Ich kenne das aus meinem
+    Studium. Wollte ich mich an etwas erinnern?\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
   m_sharedMaterial: {fileID: 188070776090905594, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
@@ -3388,6 +3389,92 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &733709963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 352128388}
+    m_Modifications:
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.010348219
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986839111374709446, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498030268112353134, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_Name
+      value: Fotoraum
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498030268112353134, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929597932112701849, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: a5337f82a82729641b360f5ff77f464e, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+--- !u!4 &733709964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
+  m_PrefabInstance: {fileID: 733709963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &735558499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6450,7 +6537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3460921697985097699, guid: 63e47b348ab604c4eb5624123fbdf0b7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5288437950325983347, guid: 63e47b348ab604c4eb5624123fbdf0b7, type: 3}
       propertyPath: m_Camera
@@ -9217,8 +9304,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ein krankes Kind. Warum ist es hier eingeschlossen?\n Hat die Formelnotiz
-    irgendetwas damit zu tun? Ich muss das herausfinden.       \r\n"
+  m_text: "Ein krankes Kind. Warum ist es hier eingeschlossen? \nHat die Formelnotiz
+    irgendetwas damit zu tun? Ich muss das herausfinden.    \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
   m_sharedMaterial: {fileID: 188070776090905594, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
