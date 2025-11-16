@@ -6,6 +6,7 @@ public class ThoughtTrigger : MonoBehaviour
     public bool triggerOnce = true;
 
     private bool hasTriggered = false;
+    public GameObject magnet;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,6 +17,10 @@ public class ThoughtTrigger : MonoBehaviour
         {
             ThoughtManager.Instance.StartDialogue(dialogue);
             hasTriggered = true;
+        }
+        if (magnet)
+        {
+            magnet.SetActive(true);
         }
     }
 }

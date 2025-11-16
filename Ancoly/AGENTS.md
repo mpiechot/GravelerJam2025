@@ -2,7 +2,7 @@
 - Project name: Ancoly
 - Unity version: Unity 6000.0.62f1
 - Active game object:
-  - Name: map4_0
+  - Name: Schluessel_Kinderzimmer
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Interaction
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
