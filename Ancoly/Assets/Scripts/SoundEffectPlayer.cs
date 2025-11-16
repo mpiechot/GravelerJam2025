@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SoundEffectPlayer : MonoBehaviour
 {
     public List<SoundEffect> soundEffects = new List<SoundEffect>();
@@ -9,7 +10,7 @@ public class SoundEffectPlayer : MonoBehaviour
 
     private void Awake()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         clipLibrary = new Dictionary<SoundType, AudioClip>();
 
         foreach (var sfx in soundEffects)

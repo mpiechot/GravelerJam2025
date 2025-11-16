@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(AudioSource))]
 public class SpatialAudioProximity : MonoBehaviour
@@ -13,10 +14,7 @@ public class SpatialAudioProximity : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.spatialBlend = 1f; // 3D-Sound aktivieren
-
-        if (!playOnStart)
-            audioSource.Stop();
+        //audioSource.spatialBlend = 1f; // 3D-Sound aktivieren
     }
 
     void Update()
@@ -27,14 +25,10 @@ public class SpatialAudioProximity : MonoBehaviour
 
         if (distance > maxHearDistance)
         {
-            if (audioSource.isPlaying)
-                audioSource.Stop();
+            audioSource.volume = 0;
         }
         else
         {
-            if (!audioSource.isPlaying)
-                audioSource.Play();
-
             // Volume anpassen
             float volume = 1f - Mathf.InverseLerp(minVolumeDistance, maxHearDistance, distance);
             audioSource.volume = Mathf.Clamp01(volume);
