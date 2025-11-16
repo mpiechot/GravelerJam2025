@@ -12,6 +12,7 @@ public class ThoughtManager : MonoBehaviour
     private ThoughtDialogue currentDialogue;
     private int lineIndex = 0;
     private bool isActive = false;
+    private float previousTimeScale = 1f;   // neu
 
     void Awake()
     {
@@ -25,6 +26,9 @@ public class ThoughtManager : MonoBehaviour
         currentDialogue = dialogue;
         lineIndex = 0;
         isActive = true;
+        // Zeit anhalten
+        previousTimeScale = Time.timeScale;
+        Time.timeScale = 0f;
 
         if (thoughtBubble != null)
             thoughtBubble.SetActive(true);
@@ -43,6 +47,7 @@ public class ThoughtManager : MonoBehaviour
     {
         isActive = false;
         currentDialogue = null;
+        Time.timeScale = previousTimeScale;
 
         if (thoughtBubble != null)
             thoughtBubble.SetActive(false);

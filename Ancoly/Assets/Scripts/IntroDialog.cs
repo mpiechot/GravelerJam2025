@@ -1,16 +1,45 @@
 using UnityEngine;
 
-public class IntroDialog : MonoBehaviour
+public class IntroOverlay : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private KeyCode closeKey = KeyCode.E;
+    [SerializeField] private float autoCloseAfterSeconds = 10f;
+    [SerializeField] private PlayerController player; // optional: Player sperren
+
+    private float timer = 0f;
+    private bool isActive = false;
+
+    private void Start()
     {
-        
+        // Overlay aktiv halten
+        gameObject.SetActive(true);
+        isActive = true;
+
+        if (player != null)
+            player.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
+        timer += Time.deltaTime;
+
+        // schließen bei Taste oder Zeitablauf
+        if (Input.GetKeyDown(closeKey) || timer >= autoCloseAfterSeconds)
+        {
+            CloseOverlay();
+        }
+    }
+
+    private void CloseOverlay()
+    {
+        isActive = false;
+
+        // Player wieder freigeben
+        if (player != null)
+            player.enabled = true;
+
+        // Canvas ausblenden
+        gameObject.SetActive(false);
     }
 }

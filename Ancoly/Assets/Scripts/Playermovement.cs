@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             animator.enabled = false;
             currentStepTime = 0f;
         }
+
     }
 
     void FixedUpdate()
@@ -96,4 +97,5 @@ public class PlayerMovement : MonoBehaviour
     {
         this.lighter.gameObject.SetActive(true);
     }
+    
 }

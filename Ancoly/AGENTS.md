@@ -2,7 +2,7 @@
 - Project name: Ancoly
 - Unity version: Unity 6000.0.62f1
 - Active game object:
-  - Name: MirrorImage
+  - Name: Tür 1 Schluessel_A
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Interaction
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

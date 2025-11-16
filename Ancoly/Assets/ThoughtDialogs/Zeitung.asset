@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0285eace5f9ee5a44a071113e75d9590, type: 3}
+  m_Name: Zeitung
+  m_EditorClassIdentifier: 
+  lines:
+  - "Zeitungsausschnitte auf dem Tisch: \r\n\r\n"
+  - "Lebenserwartung erneut gestiegen!, Datum: 22.01.\r\nDie Lebenserwartung hat
+    sich in den letzten zehn Jahren statistisch-durchschnittlich gesehen um vier
+    Jahre bei weiblichen Erwachsenen und zwei Jahre bei m\xE4nnlichen Erwachsenen
+    erh\xF6ht.\r\n\r\n"
+  - "Seltene Krankheit, Datum: 10.02.\nDie Regierung hat der Finanzierung zur Herstellung
+    eines Medikaments f\xFCr die seltene Krankheit Ancoly abgelehnt. Aktuell sind
+    vier Menschen daran erkrankt und wurden isoliert. Eine Frau ist an der Krankheit
+    gestorben. Aufgrund der Isolation der noch erkrankten Menschen wird eine Ausbreitung
+    ausgeschlossen.\n"
+  - "Ancoly-Angst,  Datum: 15.07.\nDie \xDCberseekrankheit Ancoly hat sich trotz
+    Isolierung der erkrankten Menschen weiter verbreitet. Es gibt immer mehr Infizierte.
+    Ein w\xFCtender Forscher soll f\xFCr den Ausbruch verantwortlich sein. Die Bev\xF6lkerung
+    hat, wie zu Kriegszeiten, mit Hamsterk\xE4ufen begonnen. Die Regierung hat der
+    Finanzierung der Medikamentenherstellung zur Eind\xE4mmung der Krankheit zugestimmt.\n"
+  - "\xDCber die Krankheit Ancoly habe ich schon einmal vor langer Zeit etwas geh\xF6rt.
+    Ich frage mich, ob das Kind im Zimmer diese Krankheit hat. Das immer mehr Menschen
+    diese Krankheit \n"

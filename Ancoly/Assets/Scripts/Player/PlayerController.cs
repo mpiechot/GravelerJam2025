@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
         }
 
         HandleSighTimer();
+        if (inventory.IsInsideInventory("Taschenlampe"))
+        {
+            GetComponent<PlayerMovement>().ActivateLighter();
+        }
     }
 
     private void HandleInteraction()

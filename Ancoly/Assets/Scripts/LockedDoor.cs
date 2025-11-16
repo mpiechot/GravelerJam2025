@@ -1,5 +1,7 @@
-using UnityEngine;
+using JetBrains.Annotations;
 using System.Linq;
+using ThikkGames.GravelerGJ;
+using UnityEngine;
 
 public class LockedDoor : MonoBehaviour, IInteractable
 {
@@ -9,23 +11,36 @@ public class LockedDoor : MonoBehaviour, IInteractable
     public bool DoorOpen { get; private set; } = false;
     public GameObject KeyholeUI;
     public bool hasKeyhole = true;
+    public bool pincode = false;
+    [SerializeField] private GameObject keyLock;
 
     public void Interact(InventoryManager inventory)
     {
-        if(!DoorOpen && inventory.Items.Any(item => item.Id == KeyId))
+        if (pincode)
         {
-            DoorOpen = true;
+            keyLock.SetActive(true);
         }
         else
         {
-            bool isActive = KeyholeUI.activeSelf;
-            if (hasKeyhole)
+            if (!DoorOpen && inventory.Items.Any(item => item.Id == KeyId))
             {
-                KeyholeUI.SetActive(!isActive);
-                Time.timeScale = isActive ? 1f : 0f;
+                OpenDoor();
+                DoorOpen = true;
             }
-            
+            else
+            {
+                bool isActive = KeyholeUI.activeSelf;
+                if (hasKeyhole)
+                {
+                    KeyholeUI.SetActive(!isActive);
+                    Time.timeScale = isActive ? 1f : 0f;
+                }
+
+            }
         }
-            
+    }
+    public void OpenDoor()
+    {
+        gameObject.SetActive(false);
     }
 }
