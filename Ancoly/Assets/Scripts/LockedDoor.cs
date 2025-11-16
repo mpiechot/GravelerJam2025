@@ -8,6 +8,9 @@ public class LockedDoor : MonoBehaviour, IInteractable
     [field: SerializeField]
     public int KeyId { get; private set; }
 
+    [SerializeField]
+    private SoundEffectPlayer soundEffectPlayer;
+
     public bool DoorOpen { get; private set; } = false;
     public GameObject KeyholeUI;
     public bool hasKeyhole = true;
@@ -24,11 +27,13 @@ public class LockedDoor : MonoBehaviour, IInteractable
         {
             if (!DoorOpen && inventory.Items.Any(item => item.Id == KeyId))
             {
+                soundEffectPlayer.PlaySound(SoundType.DOOR_OPEN);
                 OpenDoor();
                 DoorOpen = true;
             }
             else
             {
+                soundEffectPlayer.PlaySound(SoundType.DOOR_LOCKED);
                 bool isActive = KeyholeUI.activeSelf;
                 if (hasKeyhole)
                 {
