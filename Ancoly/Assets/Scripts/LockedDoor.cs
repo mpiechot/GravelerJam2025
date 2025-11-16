@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LockedDoor : MonoBehaviour, IInteractable
 {
@@ -14,6 +15,7 @@ public class LockedDoor : MonoBehaviour, IInteractable
     public bool hasKeyhole = true;
     public bool pincode = false;
     [SerializeField] private GameObject keyLock;
+    public UnityEvent sceneTransition;
 
     public void Interact(InventoryManager inventory)
     {
@@ -45,5 +47,6 @@ public class LockedDoor : MonoBehaviour, IInteractable
     public void OpenDoor()
     {
         gameObject.SetActive(false);
+        sceneTransition.Invoke();
     }
 }

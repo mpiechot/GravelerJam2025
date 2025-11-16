@@ -8,7 +8,7 @@ public class SceneChangerOnClickOrKey : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             ChangeScene();
         }

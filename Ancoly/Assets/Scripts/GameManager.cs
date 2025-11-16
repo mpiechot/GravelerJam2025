@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,19 +15,17 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        playerInventory.InventoryChanged += OnInventoryChanged;
+        
     }
 
-    private void OnInventoryChanged(object sender, EventArgs args)
+    public void OnSceneTransition()
     {
-        if(requiredItemIds.All(id => playerInventory.Items.Any(item => item.Id == id)))
-        {
-            GameEnd(true);
-        }
+        GameEnd(true);
     }
 
     private void GameEnd(bool successful)
     {
         // Do something... useful... maybe?
+        SceneManager.LoadScene("EndScreen");
     }
 }

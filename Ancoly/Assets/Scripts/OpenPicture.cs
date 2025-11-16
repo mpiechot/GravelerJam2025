@@ -3,7 +3,6 @@ using UnityEngine;
 public class OpenPicture : MonoBehaviour
 {
     public GameObject KeyholeUI;
-    public GameObject swirl;
     private bool inRange = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +19,6 @@ public class OpenPicture : MonoBehaviour
 
             KeyholeUI.SetActive(!isActive);
             Time.timeScale = isActive ? 1f : 0f;
-            swirl.SetActive(!isActive);
         }
         
     }
