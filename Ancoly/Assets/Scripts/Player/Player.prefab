@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 734774601409311393}
   - component: {fileID: 4175227450185597398}
   - component: {fileID: 4135081795512664395}
-  - component: {fileID: 3489720923293500954}
   - component: {fileID: 1293102647325319341}
+  - component: {fileID: 1610282921181561838}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,24 +103,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03, y: -0.54}
   m_Size: {x: 0.2, y: 0.21}
   m_Direction: 0
---- !u!114 &3489720923293500954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4950560228290586702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e868e7df5e52b44a86852bcd7237a25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 4
-  acceleration: 10
-  deceleration: 10
-  leftRotation: {x: 0, y: 0, z: 90}
-  rightRotation: {x: 0, y: 0, z: -90}
-  lighter: {fileID: 6778842409376682319}
 --- !u!114 &1293102647325319341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +118,31 @@ MonoBehaviour:
   <InteractionRadius>k__BackingField: 2
   <inventory>k__BackingField: {fileID: 7822408815535034182}
   <InteractKey>k__BackingField: 101
+  soundEffectPlayer: {fileID: 0}
+  sighTimer: 10
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &1610282921181561838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950560228290586702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e868e7df5e52b44a86852bcd7237a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  acceleration: 10
+  deceleration: 10
+  leftRotation: {x: 0, y: 0, z: 90}
+  rightRotation: {x: 0, y: 0, z: -90}
+  lighter: {fileID: 6778842409376682319}
+  soundEffectPlayer: {fileID: 0}
+  stepInterval: 0.4
 --- !u!1 &5786875454046699877
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,10 +236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1111974bc12fa45f8b78f9338281474c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
   minIntensity: 0
   maxIntensity: 3
   minTime: 0.05
   maxTime: 0.2
+  sensitivity: 5
 --- !u!1 &8076844849710638871
 GameObject:
   m_ObjectHideFlags: 0
