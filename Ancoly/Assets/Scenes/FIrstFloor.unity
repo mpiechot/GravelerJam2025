@@ -1749,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 7677741424415549219, guid: 15ca92f5b3cb2a145b25fafedd317d51, type: 3}
     - target: {fileID: 7573595748412641583, guid: aad33ee883c43fd418932952649e115d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2288,7 +2288,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Der Buchstabe A und die Zahl Vier sind im Text markiert.
+  m_text: "\xDCber die Krankheit Ancoly habe ich schon einmal etwas geh\xF6rt. \nIch
+    frage mich, ob das Kind in diesem Zimmer daran erkrankt ist. Im Text sind das
+    \u201EA\u201D und die \u201Evier\u201D eingekreist. Warum?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
   m_sharedMaterial: {fileID: 188070776090905594, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
@@ -3415,7 +3417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.29
+      value: -8.38
       objectReference: {fileID: 0}
     - target: {fileID: 2136473092071462640, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3459,12 +3461,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5498030268112353134, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8929597932112701849, guid: c14d387c2c71fe14283c21a6236df2e5, type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: a5337f82a82729641b360f5ff77f464e, type: 2}
+      objectReference: {fileID: 11400000, guid: ab172a3fa07b295488732dc5de82f18c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6537,7 +6539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3460921697985097699, guid: 63e47b348ab604c4eb5624123fbdf0b7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5288437950325983347, guid: 63e47b348ab604c4eb5624123fbdf0b7, type: 3}
       propertyPath: m_Camera
@@ -7859,7 +7861,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ich kann nichts erkennen. Ist das ein Metallriegel?
+  m_text: "Ich kann nichts erkennen. Die T\xFCr scheint mit einem Eisenriegel verschlossen
+    worden zu sein.\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}
   m_sharedMaterial: {fileID: 188070776090905594, guid: f3e8b38e71474d44ebc6c33e2842f214, type: 2}

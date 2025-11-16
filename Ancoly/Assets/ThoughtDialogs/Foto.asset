@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0285eace5f9ee5a44a071113e75d9590, type: 3}
+  m_Name: Foto
+  m_EditorClassIdentifier: 
+  lines:
+  - "Hier h\xE4ngen viele Fotos. Die Familie. Ich bin das. Mein altes Gesicht. Wie
+    kann das sein? \r\n"
+  - 'Die Formel. Die Fotos. Das ist meine Familie. Das bin ich. Ich kann mich wieder
+    erinnern. Ich wollte die elendigen Geschehnisse, die durch die Krankheit Ancoly
+    verursacht wurden, vergessen.
+
+'
+  - "Mich und meine Taten. Ich wei\xDF, dass drei Dinge unangemeldet ins Haus kommen:
+    Alter, Schulden und Tod. Meine Frau ist tot, weil ich sie mit meiner Medizin
+    retten wollte."
+  - "Meine Ger\xE4te sind kaputt und ich kann mir keine neuen leisten, da ich Schulden
+    habe. Meine Sorgen haben mich zu einem alten Mann gemacht."
